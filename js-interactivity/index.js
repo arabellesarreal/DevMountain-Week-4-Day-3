@@ -26,15 +26,15 @@ function addMovie(event){
 }
 
 function deleteMovie(event){
-    message.textContent = ('Movie deleted!')
+    message.textContent = (event.target.parentNode.textContent +' deleted!')
     event.target.parentNode.remove()
 }
 
 function crossOffMovie(event){
     if(event.target.classList.contains('checked')){
-        message.textContent = ('Movie watched!')
+        message.textContent = (event.target.textContent +' watched!')
     }else{
-        message.textContent = ('Movie added back!')
+        message.textContent = (event.target.textContent +' added back!')
     }
     event.target.classList.toggle('checked')
 }
